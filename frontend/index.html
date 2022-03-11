@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -7,8 +7,26 @@
     <title>Inscription</title>
   </head>
   <body>
-    <form method="post" action="http://localhost:3000/api/test">
-      p1=<input type="text" name="p1" value="test" />
+    <form method="post" action="http://localhost:3000/api/inscription">
+      <h1>Formulaire d'inscription : :</h1>
+      Prénom : <input type="text" name="prenom" placeholder="prénom" /> Nom :
+      <input type="text" name="nom" placeholder="nom" /> Mail:
+      <input type="text" name="mail" placeholder="ex: utilisateur@gmail.com" />
+      Mot de passe:
+      <input type="text" name="password" placeholder="ex: password" />
+      <input type="submit" value="post" />
+    </form>
+
+    <form method="post" action="http://localhost:3000/api/login">
+      <h1>Formulaire de login : :</h1>
+      Mail:
+      <input
+        type="text"
+        name="maillogin"
+        placeholder="ex: utilisateur@gmail.com"
+      />
+      Mot de passe:
+      <input type="text" name="passwordlogin" placeholder="ex: password" />
       <input type="submit" value="post" />
     </form>
   </body>
