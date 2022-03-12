@@ -37,12 +37,9 @@ app.post("/api/inscription", (req, res, next)=>{
 //login
 app.post('/api/login', (req, res, next)=> {
   Thing.findOne({ mail : req.body.maillogin, password : req.body.passwordlogin})
-    .then(thing => res.status(200).json(thing))
+    .then(thing => res.redirect(`/api/utilisateur:${thing._id}`))
     .catch(error => res.status(400).json({error}));
-    next();
 });
-app.use('/api/login', (req, res)=>{
-  res.redirect('/api/utilisateur');
-});
+
 
   module.exports = app;
