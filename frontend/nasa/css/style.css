@@ -174,28 +174,30 @@ video {
 }
 
 .reponse {
-  background-color: green;
-  height: 20vh;
-  width: 98vw;
+  /* background-color: green; */
+  height: 10vh;
+  width: 97vw;
   position: absolute;
   margin-bottom: 30vh;
   text-align: center;
-  z-index: 999;
 }
 .reponseimg {
-  background-color: #235aa6;
-  height: 75vh;
-  width: 98vw;
+  /* background-color: #235aa6; */
+  height: 120vh;
+  width: 49vw;
   position: absolute;
-  margin-top: 70vh;
+  margin-top: 100vh;
+  margin-right: 49vw;
   text-align: center;
 }
 .reponsetxt {
-  background-color: #f25757;
-  height: 70vh;
-  width: 98vw;
+  /* background-color: #f25757; */
+  height: 142vh;
+  width: 45vw;
   position: absolute;
-  margin-top: 220vh;
+  margin-top: 122vh;
+  margin-left: 52vw;
   font-size: 25px;
-  padding: 5vw;
+  padding: 10px;
+  text-align: justify;
 }
