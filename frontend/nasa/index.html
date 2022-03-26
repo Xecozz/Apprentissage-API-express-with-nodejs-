@@ -31,26 +31,31 @@
           <source src="/frontend/nasa/video/terre.mp4" type="video/mp4" />
         </video>
         <p class="description">
-          Une Date, Une Image est un site web interactif vous permettant d'avoir
-          une image et son explication prise le jour de la Date que vous avez
-          rentré.
+          "Une Date, Une Image" est un site web interactif vous permettant
+          d'avoir une image et son explication prise le jour de la Date que vous
+          avez indiqué.
         </p>
       </div>
     </section>
     <section id="about">
       <div class="content">
-        <p class="description">Les Api utilisées sont l'API de la Nasa</p>
+        <p class="description">L'Api utilisée est l'API de la Nasa</p>
       </div>
     </section>
     <section id="contact">
       <div class="content">
-        <input
-          id="searchTerm"
-          type="text"
-          name="nasa"
-          placeholder="yyyy-mm-jj"
-        />
-        <button method="get" id="search" type="submit">Chercher</button>
+        <div class="rechercher">
+          <input
+            id="searchTerm"
+            type="text"
+            name="nasa"
+            placeholder="yyyy-mm-jj"
+          />
+          <button method="get" id="search" type="submit">Rechercher</button>
+        </div>
+        <div id="title" class="reponse"></div>
+        <div id="img" class="reponseimg"></div>
+        <div id="txt" class="reponsetxt"></div>
       </div>
     </section>
   </body>

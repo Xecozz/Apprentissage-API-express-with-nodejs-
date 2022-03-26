@@ -10,7 +10,7 @@ const app = express()//initialization
 app.use(express.json())
 app.use(bodyParser.urlencoded({ extended: true }));
 
-
+app.use(bodyParser())
 //connecter à la bdd
 mongoose.connect('mongodb+srv://camille:Cg260205@cluster0.pbedp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
   { useNewUrlParser: true,
@@ -27,26 +27,20 @@ app.use((req, res, next) => {
   });
 
 //inscription
-app.post('/api/inscription', (req, res, next)=> {
+app.use('/api/inscription', (req, res, next)=> {
   const thing = new Thing({
     ...req.body
   });
-  if (Thing.findOne({ mail : thing.mail})){
-    console.log(test)
-    res.status(400).json({message : "error"})
-  }
-  else{
   thing.save()
-    .then(()=> res.status(201).json({message : "enregistré avec sucess !!!"}))
+    .then(()=> res.status(201).redirect('http://localhost:5500/frontend/account/login.html'))
     .catch(error => res.status(400).json({error}));
   console.log(thing)
-  }
 });
 
 //login
-app.get('/api/login', (req, res, next)=> {
+app.use('/api/login', (req, res, next)=> {
   Thing.findOne({ mail : req.body.maillogin, password : req.body.passwordlogin})
-    .then(thing => res.redirect(`/utilisateur:${thing._id}`))
+    .then(thing => res.redirect('http://127.0.0.1:5500/frontend/nasa/index.html'))
     .catch(error => res.status(400).json({error}));
 
 });
