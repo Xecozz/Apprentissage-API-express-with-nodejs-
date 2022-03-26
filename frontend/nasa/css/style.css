@@ -164,38 +164,50 @@ a[class="sign-in"] {
   z-index: 20;
 }
 
-video {
+#home {
+  background-image: url("/frontend/nasa/video/galaxy-3608029.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+/* video {
   height: 118.4vh;
   z-index: -20;
-}
+} */
 
 .rechercher {
   margin-bottom: 45%;
 }
 
 .reponse {
-  /* background-color: green; */
+  background-color: green;
+  display: flex;
+  flex-direction: column;
   height: 10vh;
-  width: 97vw;
+  width: 96vw;
   position: absolute;
   margin-bottom: 30vh;
   text-align: center;
 }
 .reponseimg {
-  /* background-color: #235aa6; */
-  height: 120vh;
+  background-color: #235aa6;
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
   width: 49vw;
   position: absolute;
-  margin-top: 100vh;
+  margin-top: 10vh;
   margin-right: 49vw;
   text-align: center;
 }
 .reponsetxt {
-  /* background-color: #f25757; */
-  height: 142vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f25757;
+  height: 20vh;
   width: 45vw;
   position: absolute;
-  margin-top: 122vh;
+  margin-top: 10vh;
   margin-left: 52vw;
   font-size: 25px;
   padding: 10px;
