@@ -1,5 +1,7 @@
 const http = require('http');
 const app = require('./app');
+const colors = require('colors');
+
 
 const normalizePort = val => {
   const port = parseInt(val, 10);
@@ -12,7 +14,7 @@ const normalizePort = val => {
   }
   return false;
 };
-const port = normalizePort(process.env.PORT || '3000');
+const port = normalizePort(process.env.PORT ||'3000');
 app.set('port', port);
 
 const errorHandler = error => {
@@ -41,7 +43,13 @@ server.on('error', errorHandler);
 server.on('listening', () => {
   const address = server.address();
   const bind = typeof address === 'string' ? 'pipe ' + address : 'port ' + port;
+  console.log("─────────────────────────────────────────\n")
+  console.log("Server start :".red)
   console.log('Listening on ' + bind);
+  console.log("Site: http://127.0.0.1:5500/frontend/account/login.html ")
+  console.log("-----------------------------------------\n")
+  console.log("Data connexion :".blue)
+  console.log("https://cloud.mongodb.com/v2/622bb08e08c52537ebb16a50#metrics/replicaSet/622bb1287b317b1b8a942734/explorer/myFirstDatabase/things/find")
 });
 
 server.listen(port);

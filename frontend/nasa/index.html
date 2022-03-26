@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Une Date, Une Image</title>
+    <link rel="stylesheet" href="/frontend/nasa/css/style.css" />
+    <script src="/frontend/nasa/js/index.js" defer></script>
+  </head>
+  <body>
+    <header id="header">
+      <img
+        src="https://api.nasa.gov/assets/footer/img/favicon-192.png"
+        class="logo"
+      />
+      <nav>
+        <ul class="navbar">
+          <li><a href="#home">C'est quoi?</a></li>
+          <li><a href="#about">Api utilisées</a></li>
+          <li><a href="#contact">Découvrir</a></li>
+        </ul>
+      </nav>
+      <a href="/frontend/account/login.html" class="sign-in">
+        <button class="btn-contact">Sign in</button>
+      </a>
+    </header>
+    <section id="home">
+      <div class="content">
+        <video autoplay loop>
+          <source src="/frontend/nasa/video/terre.mp4" type="video/mp4" />
+        </video>
+        <p class="description">
+          Une Date, Une Image est un site web interactif vous permettant d'avoir
+          une image et son explication prise le jour de la Date que vous avez
+          rentré.
+        </p>
+      </div>
+    </section>
+    <section id="about">
+      <div class="content">
+        <p class="description">Les Api utilisées sont l'API de la Nasa</p>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="content">
+        <input
+          id="searchTerm"
+          type="text"
+          name="nasa"
+          placeholder="yyyy-mm-jj"
+        />
+        <button method="get" id="search" type="submit">Chercher</button>
+      </div>
+    </section>
+  </body>
+</html>
