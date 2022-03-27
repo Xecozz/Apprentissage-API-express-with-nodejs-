@@ -7,17 +7,27 @@
     <title>Une Date, Une Image</title>
     <link rel="stylesheet" href="/frontend/nasa/css/style.css" />
     <script src="/frontend/nasa/js/index.js" defer></script>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/frontend/nasa/video/favicon_io/favicon-16x16.png"
+    />
   </head>
   <body>
     <header id="header">
-      <img
-        src="https://api.nasa.gov/assets/footer/img/favicon-192.png"
-        class="logo"
-      />
+      <a href="https://api.nasa.gov/">
+        <img
+          src="https://api.nasa.gov/assets/footer/img/favicon-192.png"
+          class="logo"
+          href=""
+        />
+      </a>
+
       <nav>
         <ul class="navbar">
           <li><a href="#home">C'est quoi?</a></li>
-          <li><a href="#about">Api utilisées</a></li>
+          <li><a href="#about">Api utilisée</a></li>
           <li><a href="#contact">Découvrir</a></li>
         </ul>
       </nav>
@@ -27,19 +37,18 @@
     </header>
     <section id="home">
       <div class="content">
-        <!-- <video autoplay loop>
-          <source src="/frontend/nasa/video/terre.mp4" type="video/mp4" />
-        </video> -->
         <p class="description">
-          "Une Date, Une Image" est un site web interactif vous permettant
-          d'avoir une image et son explication prise le jour de la Date que vous
-          avez indiqué.
+          "Une Date, Une Image" est un site web interactif vous permettant de
+          découvrir une image liée à l'espace grâce à une date
         </p>
       </div>
     </section>
     <section id="about">
       <div class="content">
-        <p class="description">L'Api utilisée est l'API de la Nasa</p>
+        <p class="description">
+          Nous utilisons L'api (base de donnée) de la Nasa pour vous faire
+          découvrir la beauté de l'espace
+        </p>
       </div>
     </section>
     <section id="contact">
@@ -49,9 +58,13 @@
             id="searchTerm"
             type="text"
             name="nasa"
+            class="input"
             placeholder="yyyy-mm-jj"
           />
-          <button method="get" id="search" type="submit">Rechercher</button>
+          <button id="search" type="submit" class="myButton">Rechercher</button>
+        </div>
+        <div class="description_api">
+          Rentrez une date avec le format YYYY-mm-jj et découvrez l'espace !
         </div>
         <div id="title" class="reponse"></div>
         <div id="img" class="reponseimg"></div>

@@ -19,8 +19,14 @@ async function sendApiRequest(){
 }
 
 function useApiData(data){
-    document.querySelector("#title").innerHTML += data.title
-    document.querySelector("#img").innerHTML += `<img src="${data.url}">`
-    document.querySelector("#txt").innerHTML += data.explanation
+    if(data.title == undefined){
+        document.querySelector("#title").innerHTML += "Aucune image trouvée pour cette date :("
+    }
+    else{
+        document.querySelector("#title").innerHTML += data.title
+        document.querySelector("#img").innerHTML += `<img src="${data.url}">`
+        document.querySelector("#txt").innerHTML += data.explanation
+    }
+    
 
 }

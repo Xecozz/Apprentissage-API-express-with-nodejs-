@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Open+Sans&family=Roboto:wght@300&family=Slabo+13px&display=swap");
+
 /* ======== Base ========  */
 * {
   margin: 0;
@@ -38,6 +40,7 @@ section .content {
   justify-content: center;
   padding: 2rem 9%;
   font-size: 4rem;
+  font-family: "Fredoka One", cursive;
 }
 /* ======== Header ========  */
 #header {
@@ -162,35 +165,50 @@ a[class="sign-in"] {
   text-align: center;
   color: white;
   z-index: 20;
+  font-size: 3.2rem;
+}
+
+.description_api {
+  position: absolute;
+  margin: auto;
+  padding: 50px;
+  text-align: center;
+  color: white;
+  z-index: 20;
 }
 
 #home {
-  background-image: url("/frontend/nasa/video/galaxy-3608029.jpg");
+  background-image: url("/frontend/nasa/video/wallpaperbetter.com_2560x1440.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-/* video {
-  height: 118.4vh;
-  z-index: -20;
-} */
+
+#about {
+  background-image: url("/frontend/nasa/video/moon-1527501\ \(1\).jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 
 .rechercher {
-  margin-bottom: 45%;
+  margin-bottom: 35vw;
+  margin-left: 8%;
 }
 
 .reponse {
-  background-color: green;
+  /* background-color: green; */
   display: flex;
   flex-direction: column;
   height: 10vh;
   width: 96vw;
+  font-size: 2.5rem;
   position: absolute;
   margin-bottom: 30vh;
   text-align: center;
 }
 .reponseimg {
-  background-color: #235aa6;
+  /* background-color: #235aa6; */
   display: flex;
   flex-direction: column;
   height: 20vh;
@@ -203,13 +221,69 @@ a[class="sign-in"] {
 .reponsetxt {
   display: flex;
   flex-direction: column;
-  background-color: #f25757;
+  /* background-color: #f25757; */
   height: 20vh;
   width: 45vw;
   position: absolute;
   margin-top: 10vh;
   margin-left: 52vw;
-  font-size: 25px;
+  font-size: 1.5rem;
   padding: 10px;
   text-align: justify;
+  font-family: sans-serif;
+}
+
+.description_api {
+  /* background-color: aquamarine; */
+  height: 20vh;
+  width: 50vw;
+  position: absolute;
+  margin-bottom: 52vh;
+  color: black;
+  text-align: center;
+  font-size: 1.3rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.rechercher {
+  font-family: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+.rechercher input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  border-radius: 0.3rem;
+  border: 1px solid #e0e0e0;
+  box-shadow: inset 1px 1px 1px #e0e0e080;
+  color: #4c575c;
+  transition: all 0.25s ease 0s;
+}
+
+.rechercher input:focus {
+  border-color: #409eff;
+  outline: none;
+  box-shadow: inset 1px 1px 1px #e0e0e080, 0 0 0 3px #409eff80;
+}
+
+.rechercher button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 0.3rem;
+  border: 1px solid #4c575c;
+  background: #4c575c;
+  color: #e5e5e5;
+  transition: all 0.25s ease 0s;
+  cursor: pointer;
+}
+
+.rechercher button:focus {
+  border-color: #409eff;
+  outline: none;
+  box-shadow: 0 0 0 3px #409eff80;
 }

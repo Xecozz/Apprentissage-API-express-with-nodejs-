@@ -44,6 +44,7 @@
 .form button:active,
 .form button:focus {
   background: black;
+  transition: 0.8s;
 }
 .form .message {
   margin: 15px 0 0;
