@@ -40,10 +40,9 @@ app.use('/api/inscription', (req, res, next)=> {
 //login
 app.use('/api/login', (req, res, next)=> {
   Thing.findOne({ mail : req.body.maillogin, password : req.body.passwordlogin})
-    .then(thing => res.redirect('http://127.0.0.1:5500/frontend/nasa/index.html'))
-    .catch(error => res.status(400).json({error}));
+    .then(thing => res.redirect(`http://127.0.0.1:5500/frontend/nasa/index.html`))
+    .catch(error => res.status(400).json({ message : 'impossible de ce connecter'}));
 
 });
-
 
   module.exports = app;

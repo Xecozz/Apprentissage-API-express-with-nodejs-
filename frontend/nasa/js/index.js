@@ -6,9 +6,6 @@ searchButton.addEventListener("click", ()=>{
 })
 
 async function sendApiRequest(){
-    document.getElementById("txt", ).innerHTML = ""
-    document.getElementById("title").innerHTML = ""
-    document.getElementById("img").innerHTML = ""
     let mot =document.getElementById("searchTerm").value;
     let API_KEY = "qXmZBaq0hZkcKFUqIP6FrUKyDhIrt5O3QVaUfI1K"
     let response = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&date=${mot}`);
@@ -19,14 +16,15 @@ async function sendApiRequest(){
 }
 
 function useApiData(data){
-    if(data.title == undefined){
-        document.querySelector("#title").innerHTML += "Aucune image trouvée pour cette date :("
+    if( data.url == undefined){
+        document.querySelector("#title").innerHTML = "Aucune image trouvée pour cette date :("
     }
     else{
-        document.querySelector("#title").innerHTML += data.title
-        document.querySelector("#img").innerHTML += `<img src="${data.url}">`
-        document.querySelector("#txt").innerHTML += data.explanation
+        document.querySelector("#title").innerHTML = data.title
+        document.querySelector("#img").innerHTML = `<img src="${data.url}">`
+        document.querySelector("#txt").innerHTML = data.explanation
     }
     
 
 }
+
